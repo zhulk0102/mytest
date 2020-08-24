@@ -20,7 +20,7 @@ def createTestsuite():
     os.chdir(caseDir)
     suite = []
     test_unit = unittest.TestSuite()
-    discover_suites = unittest.defaultTestLoader.discover(os.getcwd(), pattern='*.py')
+    discover_suites = unittest.TestLoader.discover(os.getcwd(), pattern='*.py')
     for testsuite in discover_suites:
         for testcase in testsuite:
             test_unit.addTest(testcase)

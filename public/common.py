@@ -25,9 +25,9 @@ class Excel(object):
             table = file.add_sheet(sheetName)
             table.write(x,y,content)
             file.save(self.filename)
-            self.log.info('写入成功')
+            log.info('写入成功')
         except FileNotFoundError:
-            self.log.info('未找到此文件')
+            log.info('未找到此文件')
 
     #读取EXCEL(表名，行，列)
     def redexcel(self,sheet,x,y):
@@ -57,6 +57,8 @@ def mysql_commit(sql):
         db.close()
     except Exception:
         log.error('执行异常')
+
+
 
 
 

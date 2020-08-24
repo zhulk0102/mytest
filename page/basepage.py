@@ -12,7 +12,6 @@ from config.url import pictureDir
 from public.common import NOW
 import time
 
-
 class basePage(object):
 
     def __init__(self,driver):
