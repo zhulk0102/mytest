@@ -198,8 +198,8 @@ def interfaceTest(caseList,path):
                         writeContent(path, i, 12, '测试失败')
                         reason.append(caseid+casename+'返回值：'+ str(res[1])+ "&nbsp" * 6 + '断言值：'+expected)
                         failCase = failCase + 1
-                    # if correlation == 'token':
-                    #     content = res[2]['tn']
+                    if correlation == 'token':
+                        content = res[2]['tn']
         elif 'N' in excute.upper():
             writeContent(path, i, 10, '')
             writeContent(path, i, 11, '')
